@@ -9,6 +9,11 @@ namespace UnitTest.xUnit
 {
     public class CalculatorTest
     {
+        public Calculator calculator { get; set; }
+        public CalculatorTest()
+        {
+            this.calculator = new Calculator();
+        }
         [Fact]//Method herhangi bir parametre almıyorsa fact kullanılıyor
         public void AddTest()
         {
