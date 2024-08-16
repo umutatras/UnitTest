@@ -39,6 +39,10 @@ namespace UnitTest.xUnit
             //var regex = "^dog";
             //Assert.Matches(regex, "dog Umut");
             //Assert.DoesNotMatch(regex, "umut Dog");
+
+            //Assert.StartsWith("Bir", "Bir masal");//Beklenen değer asıl değerimiz şeklinde yazılıyor.
+            //Assert.EndsWith("masal", "Bir masal");
+
         }
     }
 }
