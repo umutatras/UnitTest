@@ -8,9 +8,16 @@ namespace UnitTest.APP
 {
     public class Calculator
     {
+        private readonly ICalculatorService calculatorService;
+
+        public Calculator(ICalculatorService calculatorService)
+        {
+            this.calculatorService = calculatorService;
+        }
+
         public int add(int a, int b)
         {
-            return a + b;
+            return calculatorService.add(a, b);
         }
     }
 }

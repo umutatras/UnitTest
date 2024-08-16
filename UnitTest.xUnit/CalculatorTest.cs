@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Moq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,12 @@ namespace UnitTest.xUnit
     public class CalculatorTest
     {
         public Calculator calculator { get; set; }
+        public Mock<ICalculatorService> mymock { get; set; }
         public CalculatorTest()
         {
-            this.calculator = new Calculator();
+             mymock = new Mock<ICalculatorService>();
+
+            this.calculator = new Calculator(mymock.Object);
         }
         [Fact]//Method herhangi bir parametre almıyorsa fact kullanılıyor
         public void AddTest()
@@ -77,7 +81,6 @@ namespace UnitTest.xUnit
         [InlineData(2, 5, 7)]
         public void AddTest2(int a, int b, int expectedTotal)
         {
-            var calculator = new Calculator();
             var actualTotal = calculator.add(a, b);
             Assert.Equal(expectedTotal, actualTotal);
         }
@@ -88,8 +91,8 @@ namespace UnitTest.xUnit
         [InlineData(2, 5, 7)]
         public void Add_simpleValues_ReturnTotalValue(int a, int b, int expectedTotal)
         {
-            var calculator = new Calculator();
-            var actualTotal = calculator.add(a, b);
+
+             var actualTotal = calculator.add(a, b);
             Assert.Equal(expectedTotal, actualTotal);
         }
     }
