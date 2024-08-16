@@ -47,9 +47,12 @@ namespace UnitTest.xUnit
             //Assert.Empty(new List<string>() { "Fatih"});
             //Assert.NotEmpty(new List<string>() { "Fatih"});//boş olmamasını bekler
 
-            
-            Assert.InRange(10, 2, 20);//10 değeri 2 ile 20 arasında true dönmesini bekleriz.
-            Assert.NotInRange(10, 15, 20);//10 değeri 15 ile 20 dışında true dönmesini bekleriz.
+
+            //Assert.InRange(10, 2, 20);//10 değeri 2 ile 20 arasında true dönmesini bekleriz.
+            //Assert.NotInRange(10, 15, 20);//10 değeri 15 ile 20 dışında true dönmesini bekleriz.
+
+            //Assert.Single(new List<string> { "Fatih" });//dizideki count 1 tane mi diye kontrol eder
+            //Assert.Single<int>(new List<int> { 1,2,3,4});//dizideki count 1 tane mi diye kontrol eder
 
         }
     }
