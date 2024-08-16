@@ -92,7 +92,8 @@ namespace UnitTest.xUnit
         public void Add_simpleValues_ReturnTotalValue(int a, int b, int expectedTotal)
         {
 
-             var actualTotal = calculator.add(a, b);
+            mymock.Setup(x=>x.add(a,b)).Returns(expectedTotal);
+            var actualTotal = calculator.add(a, b);
             Assert.Equal(expectedTotal, actualTotal);
         }
     }
