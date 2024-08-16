@@ -57,7 +57,11 @@ namespace UnitTest.xUnit
             //Assert.IsNotType<string>("umut");//type karşılaştırması yapar
             //Assert.IsType<string>("umut");//type karşılaştırması yapar
 
-            Assert.IsAssignableFrom<IEnumerable<string>>(new List<string>());   //kaıtılmış veya implemente edilmiş mi diye kontrol eder
+            //Assert.IsAssignableFrom<IEnumerable<string>>(new List<string>());   //kaıtılmış veya implemente edilmiş mi diye kontrol eder
+
+            string deger = null;
+            Assert.Null(deger);//değerin null olup olmadığını kontrol eder.
+            Assert.NotNull(deger);//false döner çünkü null olmaması gerekiyor.
 
 
         }
