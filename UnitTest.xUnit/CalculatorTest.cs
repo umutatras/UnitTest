@@ -74,10 +74,21 @@ namespace UnitTest.xUnit
         }
 
         [Theory]
-        [InlineData(2,5,7)]
+        [InlineData(2, 5, 7)]
         public void AddTest2(int a, int b, int expectedTotal)
         {
-            var calculator=new Calculator();
+            var calculator = new Calculator();
+            var actualTotal = calculator.add(a, b);
+            Assert.Equal(expectedTotal, actualTotal);
+        }
+
+
+        //örnek test isimlendirme
+        [Theory]
+        [InlineData(2, 5, 7)]
+        public void Add_simpleValues_ReturnTotalValue(int a, int b, int expectedTotal)
+        {
+            var calculator = new Calculator();
             var actualTotal = calculator.add(a, b);
             Assert.Equal(expectedTotal, actualTotal);
         }
