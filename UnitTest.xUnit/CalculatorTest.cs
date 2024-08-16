@@ -54,7 +54,11 @@ namespace UnitTest.xUnit
             //Assert.Single(new List<string> { "Fatih" });//dizideki count 1 tane mi diye kontrol eder
             //Assert.Single<int>(new List<int> { 1,2,3,4});//dizideki count 1 tane mi diye kontrol eder
 
-            Assert.IsNotType<string>("umut");//type karşılaştırması yapar
+            //Assert.IsNotType<string>("umut");//type karşılaştırması yapar
+            //Assert.IsType<string>("umut");//type karşılaştırması yapar
+
+            Assert.IsAssignableFrom<IEnumerable<string>>(new List<string>());   //kaıtılmış veya implemente edilmiş mi diye kontrol eder
+
 
         }
     }
