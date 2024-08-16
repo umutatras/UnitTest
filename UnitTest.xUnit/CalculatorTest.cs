@@ -63,9 +63,18 @@ namespace UnitTest.xUnit
             //Assert.Null(deger);//değerin null olup olmadığını kontrol eder.
             //Assert.NotNull(deger);//false döner çünkü null olmaması gerekiyor.
 
-            Assert.Equal<int>(2, 2);//beklenen değer solda gerçek değer sağda eşit ise true
-            Assert.NotEqual<int>(3, 2);//beklenen değer solda gerçek değer sağda eşit değilse true
+            //Assert.Equal<int>(2, 2);//beklenen değer solda gerçek değer sağda eşit ise true
+            //Assert.NotEqual<int>(3, 2);//beklenen değer solda gerçek değer sağda eşit değilse true
 
+        }
+
+        [Theory]
+        [InlineData(2,5,7)]
+        public void AddTest2(int a, int b, int expectedTotal)
+        {
+            var calculator=new Calculator();
+            var actualTotal = calculator.add(a, b);
+            Assert.Equal(expectedTotal, actualTotal);
         }
     }
 }
