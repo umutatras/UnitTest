@@ -107,7 +107,11 @@ namespace UnitTest.xUnit
         {
 
             mymock.Setup(x => x.add(a, b)).Throws(new Exception("a=0 olamaz"));
-            Assert.Throws<Exception>(() => calculator.add(a, b));
+            Exception exception= Assert.Throws<Exception>(() => calculator.add(a, b));
+
+            Assert.Equal("a=0 olamazzz",exception.Message);
+
+
         }
     }
 }
