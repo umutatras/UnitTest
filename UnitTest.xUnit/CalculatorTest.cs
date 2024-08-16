@@ -81,6 +81,8 @@ namespace UnitTest.xUnit
         [InlineData(2, 5, 7)]
         public void AddTest2(int a, int b, int expectedTotal)
         {
+            mymock.Setup(x => x.add(a, b)).Returns(expectedTotal);
+
             var actualTotal = calculator.add(a, b);
             Assert.Equal(expectedTotal, actualTotal);
         }
@@ -95,6 +97,8 @@ namespace UnitTest.xUnit
             mymock.Setup(x=>x.add(a,b)).Returns(expectedTotal);
             var actualTotal = calculator.add(a, b);
             Assert.Equal(expectedTotal, actualTotal);
+
+            mymock.Verify(x => x.add(a, b), Times.Once);//methodun kaç kere çalışması gerektiğini belirler.
         }
     }
 }
