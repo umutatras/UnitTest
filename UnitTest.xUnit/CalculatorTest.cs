@@ -14,7 +14,7 @@ namespace UnitTest.xUnit
         public Mock<ICalculatorService> mymock { get; set; }
         public CalculatorTest()
         {
-             mymock = new Mock<ICalculatorService>();
+            mymock = new Mock<ICalculatorService>();
 
             this.calculator = new Calculator(mymock.Object);
         }
@@ -94,11 +94,20 @@ namespace UnitTest.xUnit
         public void Add_simpleValues_ReturnTotalValue(int a, int b, int expectedTotal)
         {
 
-            mymock.Setup(x=>x.add(a,b)).Returns(expectedTotal);
+            mymock.Setup(x => x.add(a, b)).Returns(expectedTotal);
             var actualTotal = calculator.add(a, b);
             Assert.Equal(expectedTotal, actualTotal);
 
             mymock.Verify(x => x.add(a, b), Times.Once);//methodun kaç kere çalışması gerektiğini belirler.
+        }
+        //örnek test isimlendirme
+        [Theory]
+        [InlineData(0, 5)]
+        public void Exception_simpleValues_ReturnTotalValue(int a, int b)
+        {
+
+            mymock.Setup(x => x.add(a, b)).Throws(new Exception("a=0 olamaz"));
+            Assert.Throws<Exception>(() => calculator.add(a, b));
         }
     }
 }
