@@ -14,18 +14,22 @@ namespace UnitTest.xUnit
         {
             //Arrange
             // bir nesne örneği oluşturma kısmı arrange evresinde yapılır
-            int a = 5;
-            int b = 20;
-            var calcultor = new Calculator();
+            //int a = 5;
+            //int b = 20;
+            //var calcultor = new Calculator();
 
             //Act
             //Oluşturulan nesnelerin parametrelerini verildiği evredir.
-            var total = calcultor.add(a, b);
+            //var total = calcultor.add(a, b);
 
-            //Assert
-            //Verimizi çalışıp çalışmadığını test ettiğimiz yerdir
+            ////Assert
+            ////Verimizi çalışıp çalışmadığını test ettiğimiz yerdir
 
-            Assert.Equal<int>(25, total);
+            //Assert.Equal<int>(25, total);
+            var names=new List<string>() { "Fatih","Umut","Emre"};
+            Assert.Contains(names, x => x == "Fatih");//liste içinde fatih olan var mı diye bakar.
+            Assert.Contains("fatih", "fatih çakıroğlu");//içerisinde beklenen değeri arar. true döner çünkü asıl değerimizde fatih ismi vardır.
+            Assert.DoesNotContain("emre", "fatih çakıroğlu");//içerisinde beklenen değeri içermemesini arar. true döner çünkü asıl değerimizde emre ismi yoktur.
 
         }
     }
