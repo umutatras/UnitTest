@@ -9,7 +9,7 @@ namespace UnitTest.xUnit
 {
     public class CalculatorTest
     {
-        [Fact]
+        [Fact]//Method herhangi bir parametre almıyorsa fact kullanılıyor
         public void AddTest()
         {
             //Arrange
@@ -44,9 +44,12 @@ namespace UnitTest.xUnit
             //Assert.EndsWith("masal", "Bir masal");
 
             //dizinin boş olup olmadığını kontrol eder,boş olmasını bekler
-            Assert.Empty(new List<string>() { "Fatih"});
-            Assert.NotEmpty(new List<string>() { "Fatih"});//boş olmamasını bekler
+            //Assert.Empty(new List<string>() { "Fatih"});
+            //Assert.NotEmpty(new List<string>() { "Fatih"});//boş olmamasını bekler
 
+            
+            Assert.InRange(10, 2, 20);//10 değeri 2 ile 20 arasında true dönmesini bekleriz.
+            Assert.NotInRange(10, 15, 20);//10 değeri 15 ile 20 dışında true dönmesini bekleriz.
 
         }
     }
