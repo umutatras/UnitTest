@@ -59,10 +59,12 @@ namespace UnitTest.xUnit
 
             //Assert.IsAssignableFrom<IEnumerable<string>>(new List<string>());   //kaıtılmış veya implemente edilmiş mi diye kontrol eder
 
-            string deger = null;
-            Assert.Null(deger);//değerin null olup olmadığını kontrol eder.
-            Assert.NotNull(deger);//false döner çünkü null olmaması gerekiyor.
+            //string deger = null;
+            //Assert.Null(deger);//değerin null olup olmadığını kontrol eder.
+            //Assert.NotNull(deger);//false döner çünkü null olmaması gerekiyor.
 
+            Assert.Equal<int>(2, 2);//beklenen değer solda gerçek değer sağda eşit ise true
+            Assert.NotEqual<int>(3, 2);//beklenen değer solda gerçek değer sağda eşit değilse true
 
         }
     }
