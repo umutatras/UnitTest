@@ -43,6 +43,11 @@ namespace UnitTest.xUnit
             //Assert.StartsWith("Bir", "Bir masal");//Beklenen değer asıl değerimiz şeklinde yazılıyor.
             //Assert.EndsWith("masal", "Bir masal");
 
+            //dizinin boş olup olmadığını kontrol eder,boş olmasını bekler
+            Assert.Empty(new List<string>() { "Fatih"});
+            Assert.NotEmpty(new List<string>() { "Fatih"});//boş olmamasını bekler
+
+
         }
     }
 }
