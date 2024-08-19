@@ -81,10 +81,14 @@ namespace UnitTest.xUnit
         [InlineData(2, 5, 7)]
         public void AddTest2(int a, int b, int expectedTotal)
         {
+            int actualSum=0;
             mymock.Setup(x => x.add(a, b)).Returns(expectedTotal);
+            mymock.Setup(x => x.add(It.IsAny<int>(), It.IsAny<int>())).Callback<int,int>((x,y)=> actualSum=a+b);//parametre dışında birden fazla değer tanımlaması yapmak istediğimizde uygularız.
 
             var actualTotal = calculator.add(a, b);
             Assert.Equal(expectedTotal, actualTotal);
+
+
         }
 
 
