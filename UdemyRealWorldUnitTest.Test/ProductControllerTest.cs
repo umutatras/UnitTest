@@ -48,5 +48,13 @@ namespace UdemyRealWorldUnitTest.Test
             Assert.Equal<int>(2,productList.Count());
         }
 
+        [Fact]
+        public async void Details_IdIsNull_ReturnRedirectToIndexAction()
+        {
+            var result = await _controller.Details(null);
+            var redirect=Assert.IsType<RedirectToActionResult>(result);
+            Assert.Equal("Index",redirect.ActionName);
+        }
+
     }
 }
