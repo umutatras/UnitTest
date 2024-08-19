@@ -80,5 +80,12 @@ namespace UdemyRealWorldUnitTest.Test
             Assert.Equal(product.Name,resultProduct.Name);
         }
 
+        [Fact]
+        public void Create_ActionExecutes_ReturnView()
+        {
+            var result=_controller.Create();
+            Assert.IsType<ViewResult>(result);
+        }
+
     }
 }
