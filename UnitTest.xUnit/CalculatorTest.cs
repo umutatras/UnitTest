@@ -88,6 +88,9 @@ namespace UnitTest.xUnit
             var actualTotal = calculator.add(a, b);
             Assert.Equal(expectedTotal, actualTotal);
 
+            var actualTotal2 = calculator.add(10, 20);
+            Assert.Equal(expectedTotal, actualTotal);
+
 
         }
 
