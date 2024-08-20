@@ -115,5 +115,13 @@ namespace UdemyRealWorldUnitTest.Test
             Assert.Equal(products.First().Id,newProduct.Id);
         }
 
+        [Fact]
+        public async void CreatePOST_InvalidModelState_NeverCreateExecute()
+        {
+            _controller.ModelState.AddModelError("Name", "Name alanı gereklidir");
+            var result=await _controller.Create(new Product());
+            _mockRepo.Verify(s=>s.Create(It.IsAny<Product>()),Times.Never);
+        }
+
     }
 }
