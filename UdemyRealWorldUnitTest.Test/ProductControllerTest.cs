@@ -96,12 +96,24 @@ namespace UdemyRealWorldUnitTest.Test
             Assert.IsType<Product>(viewResult.Model);
         }
         [Fact]
-        public async void Create_ValidModelState_ReturnRedirectoIndexAction()
+        public async void CreatePOST_ValidModelState_ReturnRedirectoIndexAction()
         {
             var result=await _controller.Create(products.First());
 
             var redirect=Assert.IsType<RedirectToActionResult>(result);
             Assert.Equal("Index",redirect.ActionName);  
         }
+
+        [Fact]
+        public async void CreatePOST_ValidModelState_CreateMethodExecute()
+        {
+            Product newProduct = null;
+            _mockRepo.Setup(s => s.Create(It.IsAny<Product>())).Callback<Product>(x=>newProduct=x);
+            var result = await _controller.Create(products.First());
+
+            _mockRepo.Verify(s => s.Create(It.IsAny<Product>()), Times.Once);
+            Assert.Equal(products.First().Id,newProduct.Id);
+        }
+
     }
 }
