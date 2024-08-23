@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest.APP", "UnitTest.AP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest.xUnit", "UnitTest.xUnit\UnitTest.xUnit.csproj", "{152A7F42-35EF-42CA-B271-FDA058DCDC5E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyRealWorldUnitTest.Web", "..\..\..\Desktop\UdemyRealWorldUnitTest.Web\UdemyRealWorldUnitTest.Web.csproj", "{9278B002-133D-41C1-BEC0-1328F97F8B93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UdemyRealWorldUnitTest.Test", "UdemyRealWorldUnitTest.Test\UdemyRealWorldUnitTest.Test.csproj", "{B7B4D3F2-1C2D-4687-BDC0-EE9B9D26C02A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyRealWorldUnitTest.Test", "UdemyRealWorldUnitTest.Test\UdemyRealWorldUnitTest.Test.csproj", "{B7B4D3F2-1C2D-4687-BDC0-EE9B9D26C02A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdemyRealWorldUnitTest.Web", "UdemyRealWorldUnitTest.Web\UdemyRealWorldUnitTest.Web\UdemyRealWorldUnitTest.Web.csproj", "{76D33550-288B-4D04-AF11-D2D0B854858E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,14 @@ Global
 		{152A7F42-35EF-42CA-B271-FDA058DCDC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{152A7F42-35EF-42CA-B271-FDA058DCDC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{152A7F42-35EF-42CA-B271-FDA058DCDC5E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9278B002-133D-41C1-BEC0-1328F97F8B93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9278B002-133D-41C1-BEC0-1328F97F8B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9278B002-133D-41C1-BEC0-1328F97F8B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9278B002-133D-41C1-BEC0-1328F97F8B93}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B7B4D3F2-1C2D-4687-BDC0-EE9B9D26C02A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B7B4D3F2-1C2D-4687-BDC0-EE9B9D26C02A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7B4D3F2-1C2D-4687-BDC0-EE9B9D26C02A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7B4D3F2-1C2D-4687-BDC0-EE9B9D26C02A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D33550-288B-4D04-AF11-D2D0B854858E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D33550-288B-4D04-AF11-D2D0B854858E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D33550-288B-4D04-AF11-D2D0B854858E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D33550-288B-4D04-AF11-D2D0B854858E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

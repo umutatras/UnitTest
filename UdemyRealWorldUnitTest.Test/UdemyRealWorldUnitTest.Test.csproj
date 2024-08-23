@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Desktop\UdemyRealWorldUnitTest.Web\UdemyRealWorldUnitTest.Web.csproj" />
+    <ProjectReference Include="..\UdemyRealWorldUnitTest.Web\UdemyRealWorldUnitTest.Web\UdemyRealWorldUnitTest.Web.csproj" />
   </ItemGroup>
 
 </Project>
