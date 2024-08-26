@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using UdemyRealWorldUnitTest.Web.Models;
 
 namespace UdemyRealWordUnitTest.Web.Models
 {
@@ -19,5 +21,7 @@ namespace UdemyRealWordUnitTest.Web.Models
 
         [Required]
         public string Color { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 }
