@@ -3,13 +3,14 @@ using UdemyRealWordUnitTest.Web.Models;
 
 namespace UdemyRealWorldUnitTest.Test
 {
-    internal class ProductControllerTest
+    public class ProductControllerTest
     {
         protected DbContextOptions<UdemyUnitTestDBContext> _contextOptions { get; private set; }
 
         public void SetContextOptions(DbContextOptions<UdemyUnitTestDBContext> contextOptions)
         {
             _contextOptions = contextOptions;
+            Seed();
         }
         public void Seed()
         {
