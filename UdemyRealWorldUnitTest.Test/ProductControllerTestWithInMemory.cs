@@ -42,5 +42,23 @@ namespace UdemyRealWorldUnitTest.Test
             }
 
             }
+
+        [Theory]
+        [InlineData(1)]
+        public async Task DeleteCategory_ExistCategoryId_DeleteAllProducts(int categoryId)
+        {
+            using (var context = new UdemyUnitTestDBContext(_contextOptions))
+            {
+                var category = await context.Category.FindAsync(categoryId);
+
+                context.Category.Remove(category);
+                context.SaveChanges();
+            }
+            using (var context = new UdemyUnitTestDBContext(_contextOptions))
+            {
+                var product=await context.Product.Where(x=>x.CategoryId==categoryId).ToListAsync();
+                Assert.Empty(product);
+            }
+            }
     }
 }
